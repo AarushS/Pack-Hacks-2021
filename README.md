@@ -16,4 +16,7 @@ Originally our plan was to showcase the model working by creating a Football Pre
 
 ## What's Next
 
-We hope to improve on the model and add more variables and define new relationships between already existing players—such as quantifying “synergy” between players. We also hope to add functionality to showcase the model, much like the Football Predictor. 
+We hope to improve on the model and add more variables and define new relationships between already existing players—such as quantifying “synergy” between players. We also hope to add functionality to showcase the model, much like the Football Predictor. Furthermore, we wish to add further implementations of this website into different formats, such as a mobile app that can reach a wider audience. 
+
+
+
