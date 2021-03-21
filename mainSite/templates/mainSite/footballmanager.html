@@ -187,13 +187,29 @@
 
 {% if post_req %}
 <script>
-    function contextModal(pos, name){
+    function contextModal(pos, name, games, year, rush_yards){
         var modal = document.getElementById("modal")
         modal.style.display = "block";
+        console.log(pos)
+        console.log(name)
+        console.log(games)
 
-        
+        var list = document.createElement('ul')
+    x = document.createElement('li')
+    x.innerHTML = games
+    list.appendChild(x)
+    x = document.createElement('li')
+    x.innerHTML = year
+    list.appendChild(x)
+    x = document.createElement('li')
+    x.innerHTML = rush_yards
+    list.appendChild(x)
+
+    modal.appendChild(list)
     }
-    contextModal("{{position}}")
+   
+    
+    contextModal("{{position}}","{{name}}","{{games}}","{{year}}","{{rush_yards}}")
 </script>
 {% endif %}
 
