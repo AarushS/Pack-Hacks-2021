@@ -1,5 +1,41 @@
 {% extends "mainSite/base.html" %}
 {% load static %}
 {% block content %}
-home
+<link rel="stylesheet" href="{% static 'home.css' %}"/>
+<div>
+    <h1 class="title">Covid Ball Analzyer</h1>
+    
+    <div class="topLevel1">
+        <h2 class="subHeading">COVID predictor</h2>
+        <hr>
+        <div class="subInfoContainer">
+            <p class="subInfo">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolor voluptatum debitis, ut veritatis itaque facilis magnam nemo esse assumenda ipsum. Iusto vel ex autem optio blanditiis ut voluptates culpa.
+            </p>
+        </div>
+        <div class="right">
+            <img src="{% static '' %}">
+        </div>
+    </div>
+
+    <div class="topLevel2">
+        <h2 class="subHeading">COVID predictor</h2>
+        <hr>
+        <div class="subInfoContainer right">
+            <p class="subInfo">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolor voluptatum debitis, ut veritatis itaque facilis magnam nemo esse assumenda ipsum. Iusto vel ex autem optio blanditiis ut voluptates culpa.
+            </p>
+        </div>
+        <div class="left">
+            <img src="{% static '' %}">
+        </div>
+    </div>
+
+    <div class="letsGo center">
+        <button class="btn btn-info" onclick="location.href = '/footballmanager'">
+            Lets get started
+        </button>
+    </div>
+
+</div>
 {% endblock content %}

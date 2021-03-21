@@ -1,0 +1,202 @@
+{% extends "mainSite/base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@8.3.2/dist/css/autoComplete.min.css">
+<link rel="stylesheet" href="{% static 'football.css' %}"/>
+<div class="grass">
+    <br>
+    <hr class="whiteLine">
+    <hr class="whiteLine">
+    <hr class="whiteLine">
+    <hr class="whiteLine">
+    <hr class="whiteLine">
+    <hr class="whiteLine">
+    <hr class="whiteLine">
+    <hr class="whiteLine">
+    <hr class="whiteLine">
+    <hr class="whiteLine">
+</div>
+
+<div class="ontop">
+
+    <div class="tabs">
+        <button class="btn btn-warning tabBtn" onclick="showOffense()">Offense</button>
+        <button class="btn btn-warning tabBtn" onclick="showDefense()">Defense</button>
+        <!-- <button class="btn btn-warning tabBtn">Special</button> -->
+    </div>
+
+
+    <div id="offense">
+        <div class="playerJumbo" id="QBJumbo" data-playerType="qb" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">QB</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="RBJumbo" data-playerType="rb1" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">RB</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="RB2Jumbo" data-playerType="rb2" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">RB 2</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="centerJumbo" data-playerType="c" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">Center</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="guardJumbo" data-playerType="g1" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">Guard</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="guard2Jumbo" data-playerType="g2" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">Guard 2</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="otJumbo" data-playerType="ot1" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">Offensive T 1</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="ot2Jumbo" data-playerType="ot2" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">Offensive T 2</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="wrJumbo" data-playerType="wr1" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">Wide Reciever 1</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="wr2Jumbo" data-playerType="wr2" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">Wide Reciever 2</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="defense">
+        <div class="playerJumbo" id="QBJumbo" data-playerType="qb" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">NOT QB</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="RBJumbo" data-playerType="rb1" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">RB</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="RB2Jumbo" data-playerType="rb2" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">RB 2</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="centerJumbo" data-playerType="c" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">Center</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="guardJumbo" data-playerType="g1" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">Guard</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="guard2Jumbo" data-playerType="g2" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">Guard 2</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="otJumbo" data-playerType="ot1" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">Offensive T 1</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="ot2Jumbo" data-playerType="ot2" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">Offensive T 2</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="wrJumbo" data-playerType="wr1" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">Wide Reciever 1</p>
+            </div>
+        </div>
+
+        <div class="playerJumbo" id="wr2Jumbo" data-playerType="wr2" onclick="modalOpen(this.dataset.playertype)">
+            <div class="jumboCenter">
+                <p class="playerNAME">Player 1</p>
+                <p class="playerPOS">Wide Reciever 2</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="modalClose()">&times;</span>
+        <div>
+            <form method="POST" action="{% url 'mainSite:app-football' %}" enctype="multipart/form-data" id="form"> 
+                {% csrf_token %}
+                <input name="name" id="autoComplete" autocomplete="name" tabindex="1">
+                
+                <button class="btn btn-info">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% if post_req %}
+<script>
+    function contextModal(pos, name){
+        var modal = document.getElementById("modal")
+        modal.style.display = "block";
+
+        
+    }
+    contextModal("{{position}}")
+</script>
+{% endif %}
+
+<script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@8.3.2/dist/js/autoComplete.min.js"></script>
+<script src="{% static 'football.js' %}"></script>
+{% endblock content %}
